@@ -10,7 +10,6 @@ import numpy as np
 import os
 
 
-# TODO 
 
 def make_parser():
     parser = argparse.ArgumentParser()
