@@ -23,7 +23,7 @@ for path in path_sets:
         img_paths.append(img_path)
 
 for  img_path  in img_paths:
-    print img_path
+    print(img_path)
     mat = io.loadmat(img_path.replace('.jpg','.mat').replace('images','ground_truth').replace('IMG_','GT_IMG_'))
     img= plt.imread(img_path)
     k = np.zeros((img.shape[0],img.shape[1]))

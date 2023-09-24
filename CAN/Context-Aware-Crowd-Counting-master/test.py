@@ -39,7 +39,7 @@ model.eval()
 pred= []
 gt = []
 
-for i in xrange(len(img_paths)):
+for i in range(len(img_paths)):
     img = transform(Image.open(img_paths[i]).convert('RGB')).cuda()
     img = img.unsqueeze(0)
     h,w = img.shape[2:4]
@@ -64,5 +64,5 @@ for i in xrange(len(img_paths)):
 mae = mean_absolute_error(pred,gt)
 rmse = np.sqrt(mean_squared_error(pred,gt))
 
-print 'MAE: ',mae
-print 'RMSE: ',rmse
+print('MAE: ',mae)
+print('RMSE: ',rmse)
